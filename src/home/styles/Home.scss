@@ -1,0 +1,28 @@
+.home{
+    display: grid;
+
+    place-content: center;
+    min-height: 100dvh;
+    
+}
+.Button1{
+    margin-top: 10px;
+    background-color: rgba(16, 179, 233, 0.856);
+    padding: 6px;
+    font-size: medium;
+    border-radius: 20px;
+}
+input{
+   background-color: white;
+border-radius: 5px;
+padding: 10px;
+border: 1px solid #ccc;
+font-size: 18px; 
+font-weight: 100;
+
+}
+h2, p{
+    justify-self: center;
+    
+    
+}
