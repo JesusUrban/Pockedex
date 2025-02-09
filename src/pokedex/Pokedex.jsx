@@ -4,6 +4,8 @@ import axios from 'axios'
 import PokemonList from './components/PokemonList'
 import { Link } from 'react-router'
 
+import './styles/Pokedex.scss'
+
 const POKEAPI_Base = 'https://pokeapi.co/api/v2'
 function Pokedex() {
   const [pokemons, setPokemons] =  useState([])
@@ -112,12 +114,13 @@ axios.get(`${POKEAPI_Base}/pokemon/${search}`)
 }
   return (
     <div>
-       <h1>Pokedex</h1>
-        {name && 
+      <img src="https://composer0.github.io/Pokemon-Pokedex-API/img/pokedex-hero.png" alt="" />
+  <button onClick={clearName} className='btn exit'>Sing out</button>            {name && 
        <div>
       
-       <p>Welcome {name}, here you will find your favorate Pokémon </p>
-         <button onClick={clearName}>Sing out</button>
+       <p className='Welcome__one'>Welcome {name}, here you will find your favorate Pokémon </p>
+
+        
         </div>
        }
 
@@ -130,8 +133,8 @@ axios.get(`${POKEAPI_Base}/pokemon/${search}`)
        placeholder='Filter or search by ID'
        onKeyDown={(e) => e.key === 'Enter' &&  searchPokemon()}
        />
-       <button onClick={searchPokemon}>Search</button>
-       <select
+       <button className='btn' onClick={searchPokemon}>Search</button>
+       <select 
           
         value={selectedType}
       onChange={(e) => setSelectedType(e.target.value)}
