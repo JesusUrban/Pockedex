@@ -1,28 +1,117 @@
-/* Pokemon.css */
+/* Pokemon.scss */
+
+/* Container for the entire Pokémon component */
 .pokemon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-family: 'Arial, sans-serif';
-    padding: 20px;
-  }
-  
-  .pokemon-img {
-    width: 200px;
-    height: 200px;
-  }
-  
-  .pokemon-stats, .pokemon-moves {
-    margin-top: 20px;
-    font-size: 18px;
-  }
-  
-  .pokemon-stats p, .pokemon-moves li {
-    margin: 5px 0;
-  }
-  
-  .pokemon-stats span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 217, 0, 0.603);
+  padding: 20px;
+  border-radius: 10%;
+  border: 5px solid rgb(233, 200, 36); /* corrected */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Styles for the Pokémon name */
+.pokemon-name {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+
+/* Styling for the Pokémon ID */
+.pokemon-id {
+  font-size: 1.2rem;
+  color: #838282;
+ margin-top: -35px;
+ 
+}
+
+/* Image container styling */
+.pokemon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+ 
+}
+
+/* Pokémon stats section */
+.pokemon-stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-bottom: 20px;
+
+  p {
     font-weight: bold;
+    color: #555;
+    margin: 5px 0;
+
+    span {
+      color: #333;
+      font-weight: normal;
+    }
   }
-  
+}
+
+/* Types and abilities list */
+.pokemon-types,
+.pokemon-abilities {
+  text-align: center;
+  color: #444;
+  margin: 10px 0;
+
+  span {
+    font-weight: bold;
+    color: #ff6f61;
+  }
+}
+
+/* Moves list */
+.pokemon-moves {
+  list-style-type: none;
+  padding: 0;
+
+  width: 80%;
+  max-height: 400px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+  margin-top: 20px;
+  padding-top: 10px;
+
+  li {
+    background-color: #fafafa;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: #333;
+    text-transform: capitalize;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.pokemon__stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  border-top: 1px solid #ccc;
+  padding-top: 1em;
+  margin-top: 1em;
+
+  &-item {
+    color: #999;
+    text-transform: uppercase;
+    padding: 1em;
+
+    span {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 70;
+    }
+  }
+}
