@@ -1,0 +1,28 @@
+/* Pokemon.css */
+.pokemon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Arial, sans-serif';
+    padding: 20px;
+  }
+  
+  .pokemon-img {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .pokemon-stats, .pokemon-moves {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
+  .pokemon-stats p, .pokemon-moves li {
+    margin: 5px 0;
+  }
+  
+  .pokemon-stats span {
+    font-weight: bold;
+  }
+  
